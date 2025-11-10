@@ -19,7 +19,7 @@ public class CameraZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScrollData = Input.GetAxis("Mouse Scrollwheel");
+        ScrollData = Input.GetAxis("Mouse ScrollWheel");
         TargetZoom = TargetZoom - ScrollData;
         TargetZoom = Mathf.Clamp(TargetZoom, 3, 6);
         Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, TargetZoom, Time.deltaTime * ZoomSpeed);
